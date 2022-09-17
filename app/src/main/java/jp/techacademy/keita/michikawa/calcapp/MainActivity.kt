@@ -33,10 +33,10 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             var value2: Double = binding.input2.text.toString().toDouble()
 
             when(v.id){
-                R.id.addButton    -> result = calcAdd(num1, num2)
-                R.id.subButton    -> result = calcSub(num1, num2)
-                R.id.multiButton  -> result = calcMulti(num1, num2)
-                R.id.divideButton -> result = calcDivide(num1, num2)
+                R.id.add   -> result = value1 + value2
+                R.id.subtract -> result = value1 - value2
+                R.id.multiply  -> result = value1 * value2
+                R.id.divide -> result = value1 / value2
             }
 
             var intent = Intent(this, SecondActivity::class.java)

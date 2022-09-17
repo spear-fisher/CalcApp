@@ -26,10 +26,10 @@
         android:id="@+id/add"/>
 
     <Button
-        android:id="@+id/subtract"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="-" />
+        android:text="-"
+        android:id="@+id/subtract"/>
 
     <Button
         android:layout_width="wrap_content"
