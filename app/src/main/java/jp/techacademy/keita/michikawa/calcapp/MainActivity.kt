@@ -32,15 +32,11 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
             var value1: Double = binding.input1.text.toString().toDouble()
             var value2: Double = binding.input2.text.toString().toDouble()
 
-            if (v.id == R.id.add) {
-                result = value1 + value2
-            } else if (v.id == R.id.subtract) {
-                1
-                result = value1 - value2
-            } else if (v.id == R.id.multiply) {
-                result = value1 * value2
-            } else if (v.id == R.id.divide) {
-                result = value1 / value2
+            when(v.id){
+                R.id.addButton    -> result = calcAdd(num1, num2)
+                R.id.subButton    -> result = calcSub(num1, num2)
+                R.id.multiButton  -> result = calcMulti(num1, num2)
+                R.id.divideButton -> result = calcDivide(num1, num2)
             }
 
             var intent = Intent(this, SecondActivity::class.java)
